@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.SysEvapsnCommentMapper">
+
+    <resultMap id="SysEvapsnCommentResult" type="SysEvapsnComment">
+        <id     property="id"                   column="id"      />
+        <result property="commentator"          column="commentator"      />
+        <result property="attitude"             column="attitude"   />
+        <result property="efficiency"           column="efficiency"    />
+        <result property="environment"          column="environment"        />
+        <result property="advice"               column="advice"  />
+        <result property="smtdate"              column="smtdate"          />
+        <result property="serverid"             column="serverid"       />
+
+    </resultMap>
+
+
+    <select id="selectEvapsnCommentList" parameterType="SysEvapsnComment" resultMap="SysEvapsnCommentResult">
+        select id,commentator,attitude,efficiency,environment,advice,smtdate,serverid
+        from sys_evapsn_comment e
+
+    </select>
+
+
+
+
+</mapper>
